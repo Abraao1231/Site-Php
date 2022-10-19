@@ -1,0 +1,51 @@
+<html>
+<head>
+
+</head>
+<body>
+    <style type="text/css">
+        body{background-color: #6495ed}
+        #corpo{
+            width:1000px; 
+            background-color: white; 
+            margin: 0 auto; 
+            padding: 0; 
+            border-left: 2px solid #ccc; 
+            border-right: 2px solid #ccc
+        }
+         #topo {
+            padding: 20px 25px;
+            border-bottom:2px solid #ccc;
+        }
+        #topo a{
+            color: 333;
+            text-decoration: none; 
+            font: 20px Arial;
+        }
+        #topo a:hover {text-decoration:underline;}
+            
+        #conteudo section{margin: 10px 30px;}
+        #conteudo article{ margin-bottom: 20px;}
+        #conteudo article h1 {color: red;}
+        article a{font:22px Arial;color: #333; text-decoration: none;;}
+        article h2 {padding-bottom: 7px;}
+        article a:hover {text-decoration: underline;}
+        article p {
+            font : 3px; color: #333; padding-left: 2px;
+        }
+    </style>
+    <div id="corpo">
+        <div id="topo">
+        <header>
+            <nav>
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+    </div>
+    <div id="conteudo">
+       {{area_dinamica}}
+    </div>
+    </div>
+</body>
+</html>
