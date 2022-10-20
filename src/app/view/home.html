@@ -1,21 +1,11 @@
 <section>
     <h1>Postagens:</h1>
+    {% for post in postagens%}
     <article>
         <header>
-            <h2><a href="#">Titulo da postagem</a></h2>
+            <h2><a href="http://localhost:8000/?pagina=post&id={{post.id}}">{{post.titulo}}</a></h2>
         </header>
-        <p>Conteúdo da minha primeira postagem bla bla bla  bla</p>
+        <p>{{post.conteudo}}</p>
     </article>
-    <article>
-        <header>
-            <h2><a href="#">Titulo da postagem</a></h2>
-        </header>
-        <p>Conteúdo da minha primeira postagem bla bla bla  bla</p>
-    </article>
-    <article>
-        <header>
-            <h2><a href="#">Titulo da postagem</a></h2>
-        </header>
-        <p>Conteúdo da minha primeira postagem bla bla bla  bla</p>
-    </article>
+    {% endfor %}
 </section>
