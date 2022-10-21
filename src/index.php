@@ -8,6 +8,8 @@ require_once 'app/controller/HomeController.php';
 require_once 'app/controller/ErroController.php';
 require_once 'app/controller/PostController.php';
 require_once 'app/controller/SobreController.php';
+require_once 'app/controller/AdminController.php';
+
 require_once 'app/Model/Comentario.php';
 require_once 'app/Model/Postagem.php';
 require_once 'app/lib/database/Connection.php';

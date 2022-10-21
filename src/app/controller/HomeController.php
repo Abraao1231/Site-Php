@@ -15,7 +15,6 @@ class HomeController {
 
             $conteudo = $template->render($parameters);
            echo $conteudo;
-            //var_dump($posts);
         } catch (Exception $e){
             echo $e->getMessage();
         }

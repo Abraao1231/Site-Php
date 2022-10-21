@@ -1,0 +1,26 @@
+<h1>Gerenciador de conteúdo</h1>
+<a href="http://localhost:8000/?pagina=admin&metodo=create">Criar Publicação</a>
+<br>
+<hr>
+
+{% if postagens == false %}
+    <p>{{ErrorMessage}}</p>
+{% else %}
+    <table border="2">
+        <tr>
+        <th>ID</th>
+        <th>TÍTULO</th>
+        <th>ALTERAÇÃO</th>
+        <th>DELEÇÃO</th>
+    </tr>
+    {% for post in postagens%}
+    <tr>
+        <th>{{post.id}}</th>
+        <th>{{post.titulo}}</th>
+        <th><a href="http://localhost:8000/?pagina=admin&metodo=change&id={{post.id}}">Alterar</a></th>
+        <th><a href="http://localhost:8000/?pagina=admin&metodo=delete&id={{post.id}}">Deletar</th>
+    </tr>
+    {% endfor %}
+{% endif %}
+
+</table>

@@ -2,12 +2,17 @@
 class Core{
     public function start($urlGet){
 
+        if(isset($urlGet['metodo'])){
+            $acao = $urlGet['metodo'];
+        } else {
+            $acao = 'index';
+        }
+
         if(isset($urlGet['pagina'])){
             $controller = ucfirst($urlGet['pagina'].'Controller');
         } else {
             $controller = "HomeController";
         }
-        $acao = 'index';
         if(!class_exists($controller)){
             $controller = 'ErroController';
         }
@@ -17,7 +22,7 @@ class Core{
             $id = null;
         }
 
-        call_user_func(array(new $controller, $acao), array('id' =>$id));
+        call_user_func(array(new $controller, $acao), array('id' => $id));
     }
 
 }
